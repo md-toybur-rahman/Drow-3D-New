@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/libs/google_font/google_font.css">
+    <title>Draw 3D</title>
+
+    <script src="assets/js/libs/tailwind_css/tailwind_css.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-[inter] max-w-[1280px] mx-auto px-10">
+    <nav class="flex items-center justify-between text-sm font-medium py-7">
+        <img src="assets/images/icons/logo.png" alt="">
+        <ul class="flex items-center gap-5">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="#">Public Gallery</a></li>
+        </ul>
+        <div class="flex items-center gap-2">
+            <h1>Log In</h1>
+            <h1> / </h1>
+            <h1>Sign up</h1>
+        </div>
+    </nav>
+
+
+    <!-- Add new project Home page -->
+    <section class="mt-20 mb-[160px]">
+        <h1 class="font-bold text-[28px]">Try these out</h1>
+        <p class="text-base text-[#262626] mt-4">Experiment with the latest in generative AI and let us know what you think.</p>
+
+        <div class="mt-10 flex items-center gap-4">
+            <button class="px-9 h-[84px] bg-[#6366F1] text-white rounded-xl flex items-center justify-center"><img class="me-2" src="assets/images/icons/carbon_add-filled.png" alt=""> Upload a drawing Image</button>
+            <button  class="px-9 h-[84px] border border-[#D5D5D5] text-[#666C7C] rounded-xl">Start with Blank Canvas</button>
+        </div>
+        <div class="mt-14 grid grid-cols-4 grid-rows-2 gap-x-3 gap-y-4 h-[526px]">
+            <div class="template relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 62.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+            <div class="template relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 61.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+            <div class="template row-span-2 relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 58.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+            <div class="template relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 64.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+            <div class="template col-span-2 relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 59.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+            <div class="template relative">
+                <div class="template-blur absolute bg-black h-full w-full opacity-50 hidden"></div>
+                <img class="template-icon absolute right-4 top-4 hidden" src="assets/images/icons/Group 44.png" alt="">
+                <img class="w-full h-full" src="assets/images/Rectangle 63.png" alt="">
+                <h1 class="template-icon font-semibold text-base text-white absolute bottom-5 left-7 hidden">Fun Art</h1>
+            </div>
+        </div>
+    </section>
+    <!-- End Add new project Home page -->
+</body>
+
+</html>

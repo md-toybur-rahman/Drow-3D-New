@@ -1,0 +1,6 @@
+.template:hover .template-icon {
+    display: block;
+}
+.template:hover .template-blur{
+    display: block;
+}
