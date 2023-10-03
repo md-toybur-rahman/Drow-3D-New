@@ -26,8 +26,8 @@
 </head>
 
 <body class="font-[inter]">
-    <main class="max-w-[1920px] mx-auto px-10">
-        <nav class="flex items-center justify-between text-sm font-medium py-5">
+    <main class="max-w-[1920px] mx-auto bg-[#F8F8F8] min-h-[100vh]">
+        <nav class="flex items-center justify-between text-sm font-medium py-5 bg-white px-10">
             <div class="flex items-center gap-6">
                 <div class="px-2 py-1 border-r border-[#E1E1E1]">
                     <img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt="">
@@ -60,26 +60,126 @@
             </div>
         </nav>
 
-        <section>
+        <section class="px-10 flex gap-[200px] mt-[74px]">
 
-            <div class="w-[340px] h-[70vh] px-6 py-8 border border-[#D5D5D5] rounded-lg overflow-y-scroll">
-                <h1 class="text-base mb-4">Edge Adjustment</h1>
+            <div
+                class="w-[340px] h-[80vh] max-h-[827px] px-6 py-8 border border-[#D5D5D5] rounded-lg overflow-y-scroll bg-white">
+                <h1 class="text-base mb-4 font-semibold">Edge Adjustment</h1>
                 <div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between text-sm font-semibold">
                         <h1>Scaling</h1>
-                        <input onblur="rangeInputHandler('scaling-input', 'scaling-value')" class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center" id="scaling-value" type="text" value="30">
+                        <input onblur="rangeInputHandler('scaling-input', 'scaling-value')"
+                            class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
+                            id="scaling-value" type="text" value="30">
                     </div>
-                    <input onchange="rangeHandler('scaling-input', 'scaling-value')" class="w-full my-4" id="scaling-input" type="range" min="1" max="100" value="30">
+                    <input onchange="rangeHandler('scaling-input', 'scaling-value')" class="w-full my-4"
+                        id="scaling-input" type="range" min="1" max="100" value="30">
                 </div>
                 <div>
-                    <div class="flex items-center justify-between mt-4">
+                    <div class="flex items-center justify-between mt-4 text-sm font-semibold">
                         <h1>Scaling</h1>
-                        <input onblur="rangeInputHandler('scaling2-input', 'scaling2-value')" class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center" id="scaling2-value" type="text" value="30">
+                        <input onblur="rangeInputHandler('scaling2-input', 'scaling2-value')"
+                            class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
+                            id="scaling2-value" type="text" value="30">
                     </div>
-                    <input onchange="rangeHandler('scaling2-input', 'scaling2-value')" class="w-full mt-y" id="scaling2-input" type="range" min="1" max="100" value="30">
+                    <input onchange="rangeHandler('scaling2-input', 'scaling2-value')" class="w-full my-4"
+                        id="scaling2-input" type="range" min="1" max="100" value="30">
+                </div>
+                <div>
+                    <h1 class="text-base font-semibold mb-4">Style</h1>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Photo</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 88.png" alt="">
+                            <p class="text-sm text-center ">Digital-Art</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Anime</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">3D</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 88.png" alt="">
+                            <p class="text-sm text-center ">Painting</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Vintage</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-base font-semibold mb-4">Light</h1>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Photo</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 88.png" alt="">
+                            <p class="text-sm text-center ">Digital-Art</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Anime</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">3D</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 88.png" alt="">
+                            <p class="text-sm text-center ">Painting</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/Rectangle 87.png" alt="">
+                            <p class="text-sm text-center ">Vintage</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+            <div>
+                <div class="flex items-center bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
+                    <div class="m-1 h-8 w-8 rounded-md bg-white hover:bg-[#6366F1] flex items-center justify-center">
+                        <img src="assets/images/icons/ink_eraser_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
+                    </div>
+                    <div class="m-1 h-8 w-8 rounded-md hover:bg-[#6366F1] flex items-center justify-center">
+                        <img src="assets/images/icons/shapes_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
+                    </div>
+                    <div class="m-1 h-8 w-8 rounded-md hover:bg-[#6366F1] flex items-center justify-center">
+                        <img src="assets/images/icons/ink_eraser_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-[787px] h-[527px]"></div>
+                    <div class="flex items-center gap-2 justify-center mt-4">
+                        <button class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
+                            <img src="assets/images/icons/icons8-upscaler 1.png" alt="">
+                            Upscale
+                        </button>
+                        <button class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
+                            <img src="assets/images/icons/icons8-background-remover 1.png" alt="">
+                            Remove Background
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12">
+                    <input class="text-base outline-none" type="text" placeholder="Describe the image you want to generate">
+                    <div class="flex items-center gap-2">
+                        <button
+                    class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
+                        <button class="w-10 h-[44px] rounded-xl border border-black flex items-center justify-center">
+                            <img src="assets/images/icons/mdi_auto-fix.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
