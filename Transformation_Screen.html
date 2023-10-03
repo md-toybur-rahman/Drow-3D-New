@@ -60,21 +60,32 @@
             </div>
         </nav>
 
-        <section class="h-[80vh] flex items-center justify-center">
-            <div class="flex flex-col items-center">
-                <img src="assets/images/icons/Group 217.png" alt="">
-                <div class="load-wrapp mt-6">
-                    <div class="load-2">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+        <section>
+
+            <div class="w-[340px] h-[70vh] px-6 py-8 border border-[#D5D5D5] rounded-lg overflow-y-scroll">
+                <h1 class="text-base mb-4">Edge Adjustment</h1>
+                <div>
+                    <div class="flex items-center justify-between">
+                        <h1>Scaling</h1>
+                        <input onblur="rangeInputHandler('scaling-input', 'scaling-value')" class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center" id="scaling-value" type="text" value="30">
                     </div>
+                    <input onchange="rangeHandler('scaling-input', 'scaling-value')" class="w-full my-4" id="scaling-input" type="range" min="1" max="100" value="30">
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mt-4">
+                        <h1>Scaling</h1>
+                        <input onblur="rangeInputHandler('scaling2-input', 'scaling2-value')" class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center" id="scaling2-value" type="text" value="30">
+                    </div>
+                    <input onchange="rangeHandler('scaling2-input', 'scaling2-value')" class="w-full mt-y" id="scaling2-input" type="range" min="1" max="100" value="30">
                 </div>
             </div>
+            
         </section>
 
     </main>
+
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

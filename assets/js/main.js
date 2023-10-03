@@ -25,3 +25,21 @@ window.onclick = function (event) {
     }
 }
 // end modal js
+
+
+// Range
+function rangeHandler (inputId, valueId) {
+    const Input = document.getElementById(inputId);
+    const Value = document.getElementById(valueId);
+    Value.value = Input.value;
+}
+function rangeInputHandler (inputId, valueId) {
+    const Input = document.getElementById(inputId);
+    const Value = document.getElementById(valueId);
+    const NewValue = parseInt(Value.value) 
+    console.log(NewValue);
+        if(NewValue > 100) {
+            Value.value = 100;
+        }
+        Input.value = Value.value;
+}
