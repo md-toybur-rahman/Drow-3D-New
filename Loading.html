@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/libs/google_font/google_font.css">
+    <title>Draw 3D</title>
+
+    <script src="assets/js/libs/tailwind_css/tailwind_css.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-[inter]">
+    <main class="max-w-[1280px] mx-auto px-10">
+        <nav class="flex items-center justify-between text-sm font-medium py-7">
+            <img src="assets/images/icons/logo.png" alt="">
+            <ul class="flex items-center gap-5">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Public Gallery</a></li>
+            </ul>
+            <div class="flex items-center gap-2">
+                <button class="w-[112px] h-[50px] rounded-xl bg-[#6366F1] text-white text-center">Log in</button>
+                <button class="w-[112px] h-[50px] rounded-xl border border-[#6366F1] text-[#6366F1] text-center">Sign up</button>
+            </div>
+        </nav>
+
+        <section class="h-[80vh] flex items-center justify-center">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/icons/Group 217.png" alt="">
+                <div class="load-wrapp mt-6">
+                    <div class="load-2">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

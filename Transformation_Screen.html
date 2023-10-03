@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/libs/google_font/google_font.css">
+    <title>Draw 3D</title>
+
+    <script src="assets/js/libs/tailwind_css/tailwind_css.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-[inter]">
+    <main class="max-w-[1920px] mx-auto px-10">
+        <nav class="flex items-center justify-between text-sm font-medium py-5">
+            <div class="flex items-center gap-6">
+                <div class="px-2 py-1 border-r border-[#E1E1E1]">
+                    <img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt="">
+                </div>
+                <form action="/action_page.php">
+                    <label class="text-[#868686] text-sm me-2" for="moods">Select mood </label>
+                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods">
+                        <option value="Transformation">Transformation</option>
+                        <option value="Transformation">Transformation</option>
+                        <option value="Transformation">Transformation</option>
+                        <option value="Transformation">Transformation</option>
+                    </select>
+                </form>
+            </div>
+            <div class="flex items-center gap-2">
+                <h1 class="text-base text-[#262626] text-center">Switch to Output</h1>
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" />
+                    <span class="toggle-label"></span>
+                    <span class="toggle-handle"></span>
+                </label>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="w-6 h-6">
+                    <img class="w-full h-full" src="assets/images/Rectangle 120.png" alt="">
+                </div>
+                <button
+                    class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1"><img
+                        src="assets/images/icons/material-symbols_download.png" alt=" ">Export</button>
+            </div>
+        </nav>
+
+        <section class="h-[80vh] flex items-center justify-center">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/icons/Group 217.png" alt="">
+                <div class="load-wrapp mt-6">
+                    <div class="load-2">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

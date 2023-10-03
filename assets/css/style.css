@@ -1,47 +1,197 @@
 .template:hover .template-icon {
-    display: block;
+  display: block;
 }
-.template:hover .template-blur{
-    display: block;
+
+.template:hover .template-blur {
+  display: block;
 }
 
 
 /* modal css */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* end modal css */
+
+/* Loader */
+
+.load-wrapp {
+  float: left;
+  width: 800px;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.load-wrapp p {
+  padding: 0 0 20px;
+}
+
+.load-wrapp:last-child {
+  margin-right: 0;
+}
+
+.line {
+  display: inline-block;
+  width: 50px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: black;
+}
+
+.load-2 .line:nth-last-child(1) {
+  animation: loadingB 3.5s 1.5s infinite;
+}
+
+.load-2 .line:nth-last-child(2) {
+  animation: loadingB 3.5s 1s infinite;
+}
+
+.load-2 .line:nth-last-child(3) {
+  animation: loadingB 3.5s 0.5s infinite;
+}
+
+.load-2 .line:nth-last-child(4) {
+  animation: loadingB 3.5s 0s infinite;
+}
+
+@keyframes loadingB {
+  0% {
+    width: 50px;
+  }
+
+  50% {
+    width: 150px;
+  }
+
+  100% {
+    width: 50px;
+  }
+}
+
+/* End Loader Loader */
+
+/* Toggle Style */
+.toggle {
+  position: relative;
+  display: block;
+  width: 33px;
+  height: 11px;
+  padding: 3px;
+  margin: auto;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.toggle-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: inherit;
+}
+
+.toggle-label:before,
+.toggle-label:after {
+  position: absolute;
+  top: 50%;
+  color: black;
+  margin-top: -.5em;
+  line-height: 1;
+}
+
+.toggle-input:checked~.toggle-label:before {
+  opacity: 0;
+}
+
+.toggle-input:checked~.toggle-label:after {
+  opacity: 1;
+}
+
+.toggle-handle {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  background: black;
+  border-radius: 50%;
+}
+
+.toggle-handle:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-input:checked~.toggle-handle {
+  left: 20px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Transition*/
+.toggle-label,
+.toggle-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
+}
+
+/* End Toggle Style */
