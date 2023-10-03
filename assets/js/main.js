@@ -1,5 +1,10 @@
+
+
+
+
 // modal js
 // Get the modal
+
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -43,3 +48,6 @@ function rangeInputHandler (inputId, valueId) {
         }
         Input.value = Value.value;
 }
+// End Range
+
+

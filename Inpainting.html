@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/libs/google_font/google_font.css">
+    <title>Draw 3D</title>
+
+    <script src="assets/js/libs/tailwind_css/tailwind_css.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-[inter]">
+    <main class="max-w-[1920px] mx-auto bg-[#F8F8F8] min-h-[100vh]">
+        <nav
+            class="flex items-center justify-between text-sm font-medium py-3 bg-white px-10 border-b border-[#E1E1E1]">
+            <div class="flex items-center gap-6">
+                <div class="px-2 py-1 border-r border-[#E1E1E1]">
+                    <img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt="">
+                </div>
+                <form action="">
+                    <label class="text-[#868686] text-sm me-2" for="moods">Select mood </label>
+                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods">
+                        <option value="Transformation">Transformation</option>
+                        <a href="#">
+                            <option value="Inpainting">Inpainting</option>
+                        </a>
+                        <option value="Transformation">Transformation</option>
+                        <option value="Transformation">Transformation</option>
+                    </select>
+                </form>
+            </div>
+            <div class="flex items-center gap-2">
+                <h1 class="text-base text-[#262626] text-center">Switch to Output</h1>
+                <label class="toggle">
+                    <input class="toggle-input" type="checkbox" />
+                    <span class="toggle-label"></span>
+                    <span class="toggle-handle"></span>
+                </label>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="w-6 h-6">
+                    <img class="w-full h-full" src="assets/images/Rectangle 120.png" alt="">
+                </div>
+                <button
+                    class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1"><img
+                        src="assets/images/icons/material-symbols_download.png" alt=" ">Export</button>
+            </div>
+        </nav>
+
+        <section class="px-10 flex justify-center gap-[200px] mt-[74px]">
+            <div>
+                <div>
+                    <div class="flex items-start gap-4">
+                        <div class=" bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
+                            <div
+                                class="m-1 h-9 px-2 w-[95px] rounded-md hover:bg-[#6366F1] flex items-center hover:text-white bg-[#F8F8F8]">
+                                <img src="assets/images/icons/brush_FILL0_wght400_GRAD0_opsz48 3.png" alt=""> Add
+                            </div>
+                            <div
+                                class="m-1 h-9 px-2 w-[95px] rounded-md hover:bg-[#6366F1] flex items-center hover:text-white bg-[#F8F8F8]">
+                                <img src="assets/images/icons/brush_FILL0_wght400_GRAD0_opsz48 3.png" alt=""> Shortcut
+                            </div>
+                        </div>
+                        <div class="bg-white border border-[#D5D5D5] rounded-lg w-[787px] h-[527px]"></div>
+                    </div>
+                    <div class="flex items-center gap-2 justify-center mt-4">
+                        <button
+                            class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
+                            <img src="assets/images/icons/icons8-upscaler 1.png" alt="">
+                            Upscale
+                        </button>
+                        <button
+                            class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
+                            <img src="assets/images/icons/icons8-background-remover 1.png" alt="">
+                            Remove Background
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12">
+                    <input class="text-base outline-none" type="text"
+                        placeholder="Describe the image you want to generate">
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
+                        <button class="w-10 h-[44px] rounded-xl border border-black flex items-center justify-center">
+                            <img src="assets/images/icons/mdi_auto-fix.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
