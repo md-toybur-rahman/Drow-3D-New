@@ -48,21 +48,27 @@
         <div id="myModal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close"><img src="assets/images/icons/x.png" alt=""></span>
-                <h1 class="font-bold text-[28px]">Try these out</h1>
-                <p class="text-base text-[#262626] mt-4">Experiment with the latest in generative AI and let us know
-                    what
-                    you
-                    think.</p>
+            <div class="flex items-center justify-center h-[80vh]">
+                <div class="modal-content p-[65px] rounded-xl">
+                    <span class="close"><img src="assets/images/icons/x.png" alt=""></span>
+                    <h1 class="font-bold text-[28px]">Try these out</h1>
+                    <p class="text-base text-[#262626] mt-4">Experiment with the latest in generative AI and let us know
+                        what
+                        you
+                        think.</p>
 
-                <div class="mt-10 flex items-center gap-4">
-                    <button
-                        class="px-9 h-[84px] bg-[#6366F1] text-white rounded-xl flex items-center justify-center"><img
-                            class="me-2" src="assets/images/icons/carbon_add-filled.png" alt=""> Upload a drawing
-                        Image</button>
-                    <button class="px-9 h-[84px] border border-[#D5D5D5] text-[#666C7C] rounded-xl">Start with Blank
-                        Canvas</button>
+                    <div class="mt-10 flex flex-col items-center gap-4">
+                        <button
+                            class="w-full h-[169px] bg-[#F6F6FE] text-white rounded-xl flex flex-col items-center justify-center border border-dashed border-[#D5D5D5]">
+                            <h1 class="text-[#666C7C] text-2xl font-bold">Upload a drawing Image</h1>
+                            <p class="text-base text-[#666C7C]">Drop your files here or <span class="text-[#6366F1]">browser</span></p>
+                        </button>
+                        <button
+                            class="w-full h-[169px] text-white rounded-xl flex flex-col items-center justify-center border border-[#D5D5D5]">
+                            <h1 class="text-[#666C7C] text-2xl font-bold">Start with Blank Canvas</h1>
+                            <p class="text-base text-[#666C7C]">The key is to write detailed prompt.</p>
+                        </button>
+                    </div>
                 </div>
             </div>
 
