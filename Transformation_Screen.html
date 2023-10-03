@@ -33,13 +33,12 @@
                 <div class="px-2 py-1 border-r border-[#E1E1E1]">
                     <img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt="">
                 </div>
-                <form action="/action_page.php">
+                <form action="">
                     <label class="text-[#868686] text-sm me-2" for="moods">Select mood </label>
-                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods">
-                        <option value="Transformation">Transformation</option>
-                        <option value="Inpainting">Inpainting</option>
-                        <option value="Transformation">Transformation</option>
-                        <option value="Transformation">Transformation</option>
+                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods"  onchange="javascript:location.href = this.value;">
+                        <option value="/Transformation_Screen.html" selected>Transformation</option>
+                        <option value="/Inpainting.html">Inpainting</option>
+                        <option value="/Style_Transformation.html">Style Transformation</option>
                     </select>
                 </form>
             </div>
@@ -172,17 +171,19 @@
                         </button>
                     </div>
                 </div>
-                <div
-                    class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12">
-                    <input class="text-base outline-none" type="text"
-                        placeholder="Describe the image you want to generate">
-                    <div class="flex items-center gap-2">
-                        <button
-                            class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
-                        <button class="w-10 h-[44px] rounded-xl border border-black flex items-center justify-center">
-                            <img src="assets/images/icons/mdi_auto-fix.png" alt="">
-                        </button>
-                    </div>
+            </div>
+        </section>
+
+        <section class="flex justify-center">
+            <div
+                class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12 w-[857px]">
+                <input class="text-base outline-none" type="text" placeholder="Describe the image you want to generate">
+                <div class="flex items-center gap-2">
+                    <button
+                        class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
+                    <button class="w-10 h-[44px] rounded-xl border border-black flex items-center justify-center">
+                        <img src="assets/images/icons/mdi_auto-fix.png" alt="">
+                    </button>
                 </div>
             </div>
         </section>
