@@ -33,21 +33,29 @@ window.onclick = function (event) {
 
 
 // Range
-function rangeHandler (inputId, valueId) {
+function rangeHandler(inputId, valueId) {
     const Input = document.getElementById(inputId);
     const Value = document.getElementById(valueId);
     Value.value = Input.value;
+    const value = (Input.value - Input.min) / (Input.max - Input.min) * 100;
+    Input.style.background = 'linear-gradient(to right, #6366F1 0%, #6366F1 ' + value + '%, #fff ' + value + '%, white 100%)'
 }
-function rangeInputHandler (inputId, valueId) {
+function rangeInputHandler(inputId, valueId) {
     const Input = document.getElementById(inputId);
     const Value = document.getElementById(valueId);
-    const NewValue = parseInt(Value.value) 
+    const NewValue = parseInt(Value.value)
     console.log(NewValue);
-        if(NewValue > 100) {
-            Value.value = 100;
-        }
-        Input.value = Value.value;
+    if (NewValue > 100) {
+        Value.value = 100;
+    }
+    Input.style.background = 'linear-gradient(to right, #6366F1 0%, #6366F1 ' + NewValue + '%, #fff ' + NewValue + '%, white 100%)'
+    Input.value = Value.value;
 }
 // End Range
+
+document.getElementById("scaling-input").oninput = function () {
+    var value = (this.value - this.min) / (this.max - this.min) * 100
+    this.style.background = 'linear-gradient(to right, #6366F1 0%, #6366F1 ' + value + '%, #fff ' + value + '%, white 100%)'
+};
 
 

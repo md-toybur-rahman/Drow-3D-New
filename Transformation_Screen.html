@@ -31,11 +31,12 @@
             class="flex items-center justify-between text-sm font-medium py-3 bg-white px-10 border-b border-[#E1E1E1]">
             <div class="flex items-center gap-6">
                 <div class="px-2 py-1 border-r border-[#E1E1E1]">
-                    <img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt="">
+                    <a href="Home.html"><img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt=""></a>
                 </div>
                 <form action="">
                     <label class="text-[#868686] text-sm me-2" for="moods">Select mood </label>
-                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods"  onchange="javascript:location.href = this.value;">
+                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods"
+                        onchange="javascript:location.href = this.value;">
                         <option value="/Transformation_Screen.html" selected>Transformation</option>
                         <option value="/Inpainting.html">Inpainting</option>
                         <option value="/Style_Transformation.html">Style Transformation</option>
@@ -72,7 +73,7 @@
                             class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
                             id="scaling-value" type="text" value="30">
                     </div>
-                    <input onchange="rangeHandler('scaling-input', 'scaling-value')" class="w-full my-4"
+                    <input oninput="rangeHandler('scaling-input', 'scaling-value')" class="w-full my-4"
                         id="scaling-input" type="range" min="1" max="100" value="30">
                 </div>
                 <div>
@@ -82,7 +83,7 @@
                             class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
                             id="scaling2-value" type="text" value="30">
                     </div>
-                    <input onchange="rangeHandler('scaling2-input', 'scaling2-value')" class="w-full my-4"
+                    <input oninput="rangeHandler('scaling2-input', 'scaling2-value')" class="w-full my-4"
                         id="scaling2-input" type="range" min="1" max="100" value="30">
                 </div>
                 <div>
