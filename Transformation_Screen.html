@@ -62,37 +62,42 @@
                     class="hidden w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center md:flex items-center justify-center gap-1">
                     <img src="assets/images/icons/material-symbols_download.png" alt=" ">Export
                 </button>
-                <button onclick="handleMobileMenubar('mobileMenubar')" class="md:hidden">
+                <button onclick="handleShortMenubar('mobileMenubar')" class="md:hidden">
                     <img src="assets/images/icons/menu.png" alt="">
                 </button>
                 <!-- mobile menubar -->
-                <div id="mobileMenubar" class="hidden duration-500 absolute top-0 right-0 bg-[#6366F1] p-5 text-white">
-                    <div onclick="handleCloseMenubar('mobileMenubar')" class="flex justify-end mt-5">
-                        <img src="assets/images/icons/Clear Circle Solid.png" alt="">
+                <div id="mobileMenubar" class="hidden duration-500 rounded-lg absolute -top-4 -right-2 h-0 w-0 bg-[#6366F1] text-white">
+                    <div class="p-4">
+                        <div onclick="handleCloseMenubar('mobileMenubar')" class="flex justify-end mt-5">
+                            <img src="assets/images/icons/Clear Circle Solid.png" alt="">
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <img src="assets/images/Rectangle 1202.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="font-medium text-base">EFx</h1>
+                                <p class="text-[11px] font-medium mb-1">efx@gmail.com</p>
+                                <p class="text-[11px] font-medium underline">View Account</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="flex flex-col items-center justify-center gap-10 font-medium mt-6">
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Affiliate Program</a></li>
-                        <li><a href="#">Public Gallery</a></li>
+                    <ul class="text-base font-medium">
+                        <li class="p-4 border-t border-[#A0A2FC]"><a href="#">Preferences</a></li>
+                        <li class="p-4 border-t border-[#A0A2FC]"><a href="#">Sign Out</a></li>
                     </ul>
-                    <div class="mt-10">
-                        <button
-                            class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium mb-2">Log
-                            in</button>
-                        <button
-                            class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium">Sign
-                            up</button>
-                    </div>
                 </div>
             </div>
 
         </nav>
 
-        <section class="px-10 flex gap-[200px] mt-[74px]">
+        <section class="px-4 md:px-10 md:flex gap-[200px] mt-4 md:mt-[74px]">
 
+            <div class="flex md:hidden items-center justify-end mb-[183px]">
+                <img src="assets/images/icons/Group 189.png" alt="">
+            </div>
             <div
-                class="w-[340px] h-[80vh] max-h-[827px] px-6 py-8 border border-[#D5D5D5] rounded-lg overflow-y-scroll bg-white">
+                class="w-[340px] h-[80vh] max-h-[827px] px-6 py-8 border border-[#D5D5D5] rounded-lg overflow-y-scroll bg-white hidden md:block">
                 <h1 class="text-base mb-4 font-semibold">Edge Adjustment</h1>
                 <div>
                     <div class="flex items-center justify-between text-sm font-semibold">
@@ -174,7 +179,7 @@
                 </div>
             </div>
             <div>
-                <div class="flex items-center bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
+                <div class="hidden md:flex items-center bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
                     <div class="m-1 h-8 w-8 rounded-md bg-white hover:bg-[#6366F1] flex items-center justify-center">
                         <img src="assets/images/icons/ink_eraser_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
                     </div>
@@ -186,8 +191,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-[787px] h-[527px]"></div>
-                    <div class="flex items-center gap-2 justify-center mt-4">
+
+                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-full md:w-[787px] md:h-[527px] h-[239px]"></div>
+                    <div class="hidden md:flex items-center gap-2 justify-center mt-4">
                         <button
                             class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
                             <img src="assets/images/icons/icons8-upscaler 1.png" alt="">
@@ -203,18 +209,23 @@
             </div>
         </section>
 
-        <section class="flex justify-center">
+        <section class="flex flex-col justify-center px-4">
             <div
-                class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12 w-[857px]">
+                class="bg-white border border-[#D5D5D5] px-2 md:px-4 md:py-7 rounded-lg flex items-center justify-between mt-24 mb-2 md:mb-12 md:w-[857px] h-12 md:h-auto">
                 <input class="text-base outline-none" type="text" placeholder="Describe the image you want to generate">
                 <div class="flex items-center gap-2">
                     <button
-                        class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
-                    <button class="w-10 h-[44px] rounded-xl border border-black flex items-center justify-center">
+                        class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center hidden md:flex items-center justify-center gap-1">Generate</button>
+                    <button class="w-10 h-[44px]rounded-xl border border-black hidden md:flex items-center justify-center">
                         <img src="assets/images/icons/mdi_auto-fix.png" alt="">
+                    </button>
+                    <button class="w-4 h-4 rounded-xl border md:border-black md:hidden flex items-center justify-center">
+                        <img src="assets/images/icons/mdi_auto-fix2.png" alt="">
                     </button>
                 </div>
             </div>
+            <button
+                        class="w-full h-[44px] rounded-lg bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
         </section>
 
     </main>

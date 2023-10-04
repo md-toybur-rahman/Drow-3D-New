@@ -77,6 +77,12 @@ function handleMobileMenubar (menubarId) {
     menubar.style.width = '85%';
     menubar.style.height = '85%';
 }
+function handleShortMenubar (menubarId) {
+    const menubar = document.getElementById(menubarId);
+    menubar.style.display = 'block';
+    menubar.style.width = '289px';
+    menubar.style.height = 'fit-content';
+}
 function handleCloseMenubar (menubarId) {
     const menubar = document.getElementById(menubarId);
     menubar.style.display = 'none';
