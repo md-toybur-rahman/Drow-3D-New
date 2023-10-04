@@ -59,3 +59,20 @@ document.getElementById("scaling-input").oninput = function () {
 };
 
 
+
+ function blankCanvas () {
+    const addNewProject = document.getElementById('addNewProject');
+    const loading = document.getElementById('loading');
+    const myModal = document.getElementById('myModal');
+    const copyrightFooter = document.getElementById('copyrightFooter');
+    addNewProject.style.display = 'none';
+    myModal.style.display = 'none'
+    copyrightFooter.style.display = 'none'
+    loading.style.display = 'flex';
+    setTimeout(() => {
+        loading.style.display = 'none';
+        javascript:location.href = 'Transformation_Screen.html';
+    }, 3000);
+}
+
+
