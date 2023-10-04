@@ -52,7 +52,7 @@
                 <!-- Modal content -->
                 <div class="flex items-center justify-center h-[80vh]">
                     <div class="modal-content p-[65px] rounded-xl">
-                        <span class="close"><img src="assets/images/icons/x.png" alt=""></span>
+                        <span onclick="modalClose('myModal')" class="close"><img src="assets/images/icons/x.png" alt=""></span>
                         <h1 class="font-bold text-[28px]">Try these out</h1>
                         <p class="text-base text-[#262626] mt-4">Experiment with the latest in generative AI and let us
                             know
@@ -88,7 +88,7 @@
                         you
                         think.</p>
                     <div class="mt-14 grid grid-cols-4 grid-rows-2 gap-x-3 gap-y-4 h-[526px]">
-                        <div id="myBtn"
+                        <div id="myBtn" onclick="modalHandler('myModal')"
                             class="bg-[#6366F1] row-span-2 flex items-center justify-center rounded-2xl cursor-crosshair">
                             <h1 class="text-2xl font-bold text-white">Add new Project</h1>
                         </div>
