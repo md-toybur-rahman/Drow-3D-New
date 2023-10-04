@@ -28,13 +28,16 @@
 <body class="font-[inter]">
     <main class="max-w-[1920px] mx-auto bg-[#F8F8F8] min-h-[100vh]">
         <nav
-            class="flex items-center justify-between text-sm font-medium py-3 bg-white px-10 border-b border-[#E1E1E1]">
-            <div class="flex items-center gap-6">
-                <div class="px-2 py-1 border-r border-[#E1E1E1]">
-                    <a href="New_project.html"><img class="w-[84px] h-6" src="assets/images/icons/logo.png" alt=""></a>
+            class="flex items-center justify-between text-sm font-medium py-3 bg-white px-3 md:px-10 border-b border-[#E1E1E1]">
+            <div class="flex items-center md:gap-6">
+                <div class="px-2 py-1">
+                    <a class="hidden md:block" href="New_project.html"><img src="assets/images/icons/logo.png"
+                            alt=""></a>
+                    <a class="md:hidden" href="New_project.html"><img src="assets/images/icons/dark logo.png"
+                            alt=""></a>
                 </div>
                 <form action="">
-                    <label class="text-[#868686] text-sm me-2" for="moods">Select mood </label>
+                    <label class="hidden md:block text-[#868686] text-sm me-2" for="moods">Select mood </label>
                     <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods"
                         onchange="javascript:location.href = this.value;">
                         <option value="/Transformation_Screen.html" selected>Transformation</option>
@@ -44,7 +47,7 @@
                 </form>
             </div>
             <div class="flex items-center gap-2">
-                <h1 class="text-base text-[#262626] text-center">Switch to Output</h1>
+                <h1 class="hidden md:block text-base text-[#262626] text-center">Switch to Output</h1>
                 <label class="toggle">
                     <input class="toggle-input" type="checkbox" />
                     <span class="toggle-label"></span>
@@ -56,9 +59,34 @@
                     <img class="w-full h-full" src="assets/images/Rectangle 120.png" alt="">
                 </div>
                 <button
-                    class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center flex items-center justify-center gap-1"><img
-                        src="assets/images/icons/material-symbols_download.png" alt=" ">Export</button>
+                    class="hidden w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center md:flex items-center justify-center gap-1">
+                    <img src="assets/images/icons/material-symbols_download.png" alt=" ">Export
+                </button>
+                <button onclick="handleMobileMenubar('mobileMenubar')" class="md:hidden">
+                    <img src="assets/images/icons/menu.png" alt="">
+                </button>
+                <!-- mobile menubar -->
+                <div id="mobileMenubar" class="hidden duration-500 absolute top-0 right-0 bg-[#6366F1] p-5 text-white">
+                    <div onclick="handleCloseMenubar('mobileMenubar')" class="flex justify-end mt-5">
+                        <img src="assets/images/icons/Clear Circle Solid.png" alt="">
+                    </div>
+                    <ul class="flex flex-col items-center justify-center gap-10 font-medium mt-6">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Public Gallery</a></li>
+                    </ul>
+                    <div class="mt-10">
+                        <button
+                            class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium mb-2">Log
+                            in</button>
+                        <button
+                            class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium">Sign
+                            up</button>
+                    </div>
+                </div>
             </div>
+
         </nav>
 
         <section class="px-10 flex gap-[200px] mt-[74px]">
@@ -191,20 +219,20 @@
 
     </main>
 
-        <!-- loading -->
-        <section id="loading" class="h-[80vh] items-center justify-center hidden">
-            <div class="flex flex-col items-center">
-                <img src="assets/images/icons/Group 217.png" alt="">
-                <div class="load-wrapp mt-6">
-                    <div class="load-2">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+    <!-- loading -->
+    <section id="loading" class="h-[80vh] items-center justify-center hidden">
+        <div class="flex flex-col items-center">
+            <img src="assets/images/icons/Group 217.png" alt="">
+            <div class="load-wrapp mt-6">
+                <div class="load-2">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <script src="assets/js/main.js"></script>
 </body>

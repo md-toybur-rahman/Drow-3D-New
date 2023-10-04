@@ -56,12 +56,12 @@ document.getElementById("scaling-input").oninput = function () {
 
 
 
-function blankCanvas() {
-    const addNewProject = document.getElementById('addNewProject');
-    const loading = document.getElementById('loading');
-    const myModal = document.getElementById('myModal');
-    const copyrightFooter = document.getElementById('copyrightFooter');
-    addNewProject.style.display = 'none';
+function blankCanvas(elementId,loadingId, modalId, footerId) {
+    const hideElement = document.getElementById(elementId);
+    const loading = document.getElementById(loadingId);
+    const myModal = document.getElementById(modalId);
+    const copyrightFooter = document.getElementById(footerId);
+    hideElement.style.display = 'none';
     myModal.style.display = 'none'
     copyrightFooter.style.display = 'none'
     loading.style.display = 'flex';
@@ -69,6 +69,19 @@ function blankCanvas() {
         loading.style.display = 'none';
         javascript: location.href = 'Transformation_Screen.html';
     }, 3000);
+}
+
+function handleMobileMenubar (menubarId) {
+    const menubar = document.getElementById(menubarId);
+    menubar.style.display = 'block';
+    menubar.style.width = '85%';
+    menubar.style.height = '85%';
+}
+function handleCloseMenubar (menubarId) {
+    const menubar = document.getElementById(menubarId);
+    menubar.style.display = 'none';
+    menubar.style.width = '0%';
+    menubar.style.height = '0%';
 }
 
 

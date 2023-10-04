@@ -233,3 +233,31 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .line {
+    width: 20px;
+    height: 10px;
+  }
+
+  @keyframes loadingB {
+    0% {
+      width: 20px;
+    }
+
+    50% {
+      width: 50px;
+    }
+
+    100% {
+      width: 20px;
+    }
+  }
+
+}
