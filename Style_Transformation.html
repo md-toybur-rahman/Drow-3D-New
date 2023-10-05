@@ -31,10 +31,8 @@
             class="flex items-center justify-between text-sm font-medium py-3 bg-white px-3 md:px-10 border-b border-[#E1E1E1]">
             <div class="flex items-center md:gap-6">
                 <div class="px-2 py-1">
-                    <a class="hidden md:block" href="New_project.html"><img src="assets/images/icons/logo.png"
-                            alt=""></a>
-                    <a class="md:hidden" href="New_project.html"><img src="assets/images/icons/dark logo.png"
-                            alt=""></a>
+                    <a class="hidden md:block" href="Home.html"><img src="assets/images/icons/logo.png" alt=""></a>
+                    <a class="md:hidden" href="Home.html"><img src="assets/images/icons/dark logo.png" alt=""></a>
                 </div>
                 <form class="flex items-center" action="">
                     <label class="hidden md:block text-[#868686] text-sm me-2" for="moods">Select mood </label>
@@ -91,9 +89,14 @@
             </div>
         </nav>
 
-        <section class="px-10 flex items-center gap-[200px] mt-[74px]">
+        <section class="px-4 md:px-10 md:flex gap-[200px] mt-4 md:mt-[74px]">
 
-            <div class="p-6 rounded-xl border border-[#D5D5D5] h-fit">
+            <div class="flex md:hidden items-center justify-between mb-[140px]">
+                <img src="assets/images/icons/Clear Circle Solid.png" alt="">
+                <img src="assets/images/icons/Group 189.png" alt="">
+            </div>
+
+            <div class="hidden md:block p-6 rounded-xl border border-[#D5D5D5] h-fit">
                 <h1 class="font-bold text-base text-black">Upload</h1>
                 <div class="mt-4">
                     <button
@@ -104,7 +107,7 @@
                 </div>
             </div>
             <div>
-                <div class="flex items-center bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
+                <div class="hidden md:flex items-center bg-white border border-[#D5D5D5] rounded-lg w-fit mb-4">
                     <div class="m-1 h-8 w-8 rounded-md bg-white hover:bg-[#6366F1] flex items-center justify-center">
                         <img src="assets/images/icons/ink_eraser_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
                     </div>
@@ -116,8 +119,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-[787px] h-[527px]"></div>
-                    <div class="flex items-center gap-2 justify-center mt-4">
+                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-full md:w-[787px] md:h-[527px] h-[239px]">
+                    </div>
+                    <div class="hidden md:flex items-center gap-2 justify-center mt-4">
                         <button
                             class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
                             <img src="assets/images/icons/icons8-upscaler 1.png" alt="">
@@ -132,7 +136,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex justify-center">
+        <section class="hidden md:flex justify-center">
             <div
                 class="bg-white border border-[#D5D5D5] px-4 py-7 rounded-lg flex items-center justify-between mt-24 mb-12 w-[857px]">
                 <input class="text-base outline-none" type="text" placeholder="Describe the image you want to generate">
@@ -146,7 +150,39 @@
             </div>
         </section>
 
+        <section class="flex md:hidden flex-col justify-center px-4">
+            <div
+                class="bg-white border border-[#D5D5D5] px-2 md:px-4 md:py-7 rounded-lg flex items-center justify-between mt-24 mb-2 md:mb-12 md:w-[857px] h-12 md:h-auto">
+                <input class="text-base outline-none overflow-hidden pe-5" type="text"
+                    placeholder="Describe the image you want to generate">
+                <div class="flex items-center gap-2">
+                    <button class="w-4 h-4 flex items-center justify-center">
+                        <img src="assets/images/icons/mdi_auto-fix2.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <button
+                class="w-full h-[44px] rounded-lg bg-[#6366F1] text-white text-center flex items-center justify-center gap-1 mb-[130px]">
+                Generate
+            </button>
+        </section>
+
     </main>
+
+    <!-- Toolbar Section -->
+    <section class="fixed w-full bottom-0">
+        <div class="flex md:hidden gap-[50%] justify-center px-8 py-6 border-t border-[#D5D5D5] text-[11px] bg-white">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/icons/Dashboard 1.png" alt="">
+                <h1>Upscale</h1>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="assets/images/icons/Dashboard 1.png" alt="">
+                <h1>BG Remove</h1>
+            </div>
+        </div>
+    </section>
+    <!-- End Toolbar Section -->
 
 
     <script src="assets/js/main.js"></script>

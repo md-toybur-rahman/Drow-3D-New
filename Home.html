@@ -29,8 +29,8 @@
     <main class="max-w-[1280px] mx-auto md:px-10">
         <nav
             class="flex items-center justify-between text-sm font-medium px-3 md:px-0  py-3 md:py-7 border-b border-[#D5D5D5]">
-            <a class="hidden md:block" href="New_project.html"><img src="assets/images/icons/logo.png" alt=""></a>
-            <a class="md:hidden" href="New_project.html"><img src="assets/images/icons/dark logo.png" alt=""></a>
+            <a class="hidden md:block" href="Home.html"><img src="assets/images/icons/logo.png" alt=""></a>
+            <a class="md:hidden" href="Home.html"><img src="assets/images/icons/dark logo.png" alt=""></a>
             <ul class="hidden md:flex items-center gap-5">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Pricing</a></li>
@@ -46,7 +46,8 @@
                 <img src="assets/images/icons/menu.png" alt="">
             </button>
             <!-- mobile menubar -->
-            <div id="mobileMenubar" class="hidden duration-500 absolute rounded-lg -top-4 -right-2 bg-[#6366F1] p-5 text-white">
+            <div id="mobileMenubar"
+                class="hidden duration-500 absolute rounded-lg -top-4 -right-2 bg-[#6366F1] p-5 text-white">
                 <div onclick="handleCloseMenubar('mobileMenubar')" class="flex justify-end mt-5">
                     <img src="assets/images/icons/Clear Circle Solid.png" alt="">
                 </div>
@@ -57,8 +58,12 @@
                     <li><a href="#">Public Gallery</a></li>
                 </ul>
                 <div class="mt-10">
-                    <button class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium mb-2">Log in</button>
-                    <button class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium">Sign up</button>
+                    <button
+                        class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium mb-2">Log
+                        in</button>
+                    <button
+                        class="w-full py-4 text-center rounded-xl text-white hover:text-[#6366F1] border bg-transparent hover:bg-white font-medium">Sign
+                        up</button>
                 </div>
             </div>
         </nav>
@@ -125,11 +130,14 @@
                     think.</p>
 
                 <div class="mt-10 hidden md:flex items-center gap-4">
-                    <button
-                        class="px-9 h-[84px] bg-[#6366F1] text-white rounded-xl flex items-center justify-center"><img
+                    <a onclick="blankCanvas('homeContent', 'homeLoading', 'homeModal', 'homeCopyright')" class="px-9 h-[84px] bg-[#6366F1] text-white rounded-xl flex items-center justify-center" href="#">
+                        <button class="flex items-center justify-center"><img
                             class="me-2" src="assets/images/icons/carbon_add-filled.png" alt=""> Upload a drawing
                         Image</button>
-                    <a onclick="blankCanvas('homeContent', 'homeLoading', 'homeModal', 'homeCopyright')" class="px-9 h-[84px] border border-[#D5D5D5] text-[#666C7C] rounded-xl flex items-center justify-center"
+                    </a>
+                    
+                    <a onclick="blankCanvas('homeContent', 'homeLoading', 'homeModal', 'homeCopyright')"
+                        class="px-9 h-[84px] border border-[#D5D5D5] text-[#666C7C] rounded-xl flex items-center justify-center"
                         href="#">
                         <button>Start with Blank
                             Canvas</button>
