@@ -1,6 +1,7 @@
 # Draw 3d
+## Read the Documentation.
 
-## Contributing
+## Features
 
 1. Move to Home Page: Click on the Logo of Navbar for move to Home Page.
 2. For see More Features: Click on the "Upload a drawing Image" Button or "Start With Blank Canvas" Button
