@@ -36,9 +36,9 @@
                     <a class="md:hidden" href="New_project.html"><img src="assets/images/icons/dark logo.png"
                             alt=""></a>
                 </div>
-                <form action="">
+                <form class="flex items-center" action="">
                     <label class="hidden md:block text-[#868686] text-sm me-2" for="moods">Select mood </label>
-                    <select class="w-[151px] px-3 py-2 text-sm" name="moods" id="moods"
+                    <select class="w-[151px] px-3 py-2 text-sm overflow-hidden" name="moods" id="moods"
                         onchange="javascript:location.href = this.value;">
                         <option value="/Transformation_Screen.html" selected>Transformation</option>
                         <option value="/Inpainting.html">Inpainting</option>
@@ -66,7 +66,8 @@
                     <img src="assets/images/icons/menu.png" alt="">
                 </button>
                 <!-- mobile menubar -->
-                <div id="mobileMenubar" class="hidden duration-500 rounded-lg absolute -top-4 -right-2 h-0 w-0 bg-[#6366F1] text-white">
+                <div id="mobileMenubar"
+                    class="hidden duration-500 rounded-lg absolute -top-4 -right-2 h-0 w-0 bg-[#6366F1] text-white">
                     <div class="p-4">
                         <div onclick="handleCloseMenubar('mobileMenubar')" class="flex justify-end mt-5">
                             <img src="assets/images/icons/Clear Circle Solid.png" alt="">
@@ -93,7 +94,7 @@
 
         <section class="px-4 md:px-10 md:flex gap-[200px] mt-4 md:mt-[74px]">
 
-            <div class="flex md:hidden items-center justify-end mb-[183px]">
+            <div class="flex md:hidden items-center justify-end mb-[140px]">
                 <img src="assets/images/icons/Group 189.png" alt="">
             </div>
             <div
@@ -191,8 +192,9 @@
                     </div>
                 </div>
                 <div>
-
-                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-full md:w-[787px] md:h-[527px] h-[239px]"></div>
+                    <!-- Middle Canvas -->
+                    <div class="bg-white border border-[#D5D5D5] rounded-lg w-full md:w-[787px] md:h-[527px] h-[239px]">
+                    </div>
                     <div class="hidden md:flex items-center gap-2 justify-center mt-4">
                         <button
                             class="px-4 py-3 bg-white rounded-md border border-[#D5D5D5] flex items-center justify-center gap-1 text-sm font-medium">
@@ -206,29 +208,177 @@
                         </button>
                     </div>
                 </div>
+                <div
+                    class="bg-white border border-[#D5D5D5] px-2 md:px-4 md:py-7 rounded-lg hidden md:flex items-center justify-between mt-24 mb-2 md:mb-12 md:w-[857px] h-12 md:h-auto">
+                    <input class="text-base outline-none" type="text"
+                        placeholder="Describe the image you want to generate">
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center hidden md:flex items-center justify-center gap-1">Generate</button>
+                        <button
+                            class="w-10 h-[44px] rounded-lg border border-black flex items-center justify-center">
+                            <img src="assets/images/icons/mdi_auto-fix.png" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="flex flex-col justify-center px-4">
+        <section class="flex md:hidden flex-col justify-center px-4">
             <div
                 class="bg-white border border-[#D5D5D5] px-2 md:px-4 md:py-7 rounded-lg flex items-center justify-between mt-24 mb-2 md:mb-12 md:w-[857px] h-12 md:h-auto">
                 <input class="text-base outline-none" type="text" placeholder="Describe the image you want to generate">
                 <div class="flex items-center gap-2">
                     <button
-                        class="w-[112px] h-[44px] rounded-xl bg-[#6366F1] text-white text-center hidden md:flex items-center justify-center gap-1">Generate</button>
-                    <button class="w-10 h-[44px]rounded-xl border border-black hidden md:flex items-center justify-center">
-                        <img src="assets/images/icons/mdi_auto-fix.png" alt="">
-                    </button>
-                    <button class="w-4 h-4 rounded-xl border md:border-black md:hidden flex items-center justify-center">
+                        class="w-4 h-4 flex items-center justify-center">
                         <img src="assets/images/icons/mdi_auto-fix2.png" alt="">
                     </button>
                 </div>
             </div>
             <button
-                        class="w-full h-[44px] rounded-lg bg-[#6366F1] text-white text-center flex items-center justify-center gap-1">Generate</button>
+                class="w-full h-[44px] rounded-lg bg-[#6366F1] text-white text-center flex items-center justify-center gap-1 mb-[130px]">
+                Generate
+            </button>
         </section>
 
     </main>
+    <!-- Toolbar Section -->
+    <section class="fixed w-full bottom-0">
+        <div>
+            <div class="flex md:hidden justify-between px-4 py-6 border-t border-[#D5D5D5] text-[11px] bg-white">
+                <div onclick="openTools('toolsOptions')" class="flex flex-col items-center">
+                    <img src="assets/images/icons/Dashboard 1.png" alt="">
+                    <h1>Tools</h1>
+                </div>
+                <div onclick="openTools('adjustOptions')" class="flex flex-col items-center">
+                    <img src="assets/images/icons/Sliders 1.png" alt="">
+                    <h1>Adjust</h1>
+                </div>
+                <div onclick="openTools('styleOptions')" class="flex flex-col items-center">
+                    <img src="assets/images/icons/Favourite Photo.png" alt="">
+                    <h1>Style</h1>
+                </div class="flex flex-col items-center">
+                <div onclick="openTools('lightOptions')" class="flex flex-col items-center">
+                    <img src="assets/images/icons/Light-Sun.png" alt="">
+                    <h1>Light</h1>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="assets/images/icons/Vector.png" alt="">
+                    <h1>Upscale</h1>
+                </div>
+            </div>
+
+            <!-- tools -->
+            <div id="toolsOptions" class="hidden fixed bottom-0 z-10 border-t border-[#D5D5D5] bg-white w-full pb-10">
+                <div onclick="closeTools('toolsOptions')" class="flex items-center px-4 py-3">
+                    <img src="assets/images/icons/Clear.png" alt="">
+                    <h1 class="text-base font-medium text-center flex-grow">Tools</h1>
+                </div>
+                <div class="flex gap-4 px-4 py-6 text-[11px]">
+                    <div class="flex flex-col items-center border border-[#D5D5D5] rounded-lg px-3 py-2 gap-1">
+                        <img src="assets/images/icons/brush_FILL0_wght400_GRAD0_opsz48 3.png" alt="">
+                        <h1>Brush</h1>
+                    </div>
+                    <div class="flex flex-col items-center border border-[#D5D5D5] rounded-lg px-3 py-2 gap-1">
+                        <img src="assets/images/icons/ink_eraser_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
+                        <h1>Eraser</h1>
+                    </div>
+                    <div class="flex flex-col items-center border border-[#D5D5D5] rounded-lg px-3 py-2 gap-1">
+                        <img src="assets/images/icons/shapes_FILL0_wght400_GRAD0_opsz48 1.png" alt="">
+                        <h1>Shape</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- end tools -->
+            <!-- Edge Adjustment -->
+            <div id="adjustOptions" class="hidden fixed bottom-0 z-10 border-t border-[#D5D5D5] bg-white w-full pb-10">
+                <div onclick="closeTools('adjustOptions')" class="flex items-center px-4 py-3">
+                    <img src="assets/images/icons/Clear.png" alt="">
+                    <h1 class="text-base font-medium text-center flex-grow">Edge Adjustment</h1>
+                </div>
+                <div class="px-4">
+                    <div>
+                        <div class="flex items-center justify-between text-sm font-semibold">
+                            <h1>Scaling</h1>
+                            <input onblur="rangeInputHandler('mobile-scaling-input', 'mobile-scaling-value')"
+                                class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
+                                id="mobile-scaling-value" type="text" value="30">
+                        </div>
+                        <input oninput="rangeHandler('mobile-scaling-input', 'mobile-scaling-value')"
+                            class="w-full my-4" id="mobile-scaling-input" type="range" min="1" max="100" value="30">
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mt-4 text-sm font-semibold">
+                            <h1>Scaling</h1>
+                            <input onblur="rangeInputHandler('mobile-scaling2-input', 'mobile-scaling2-value')"
+                                class="border border-[#D5D5D5] rounded-xl outline-none w-[40px] text-center"
+                                id="mobile-scaling2-value" type="text" value="30">
+                        </div>
+                        <input oninput="rangeHandler('mobile-scaling2-input', 'mobile-scaling2-value')"
+                            class="w-full my-4" id="mobile-scaling2-input" type="range" min="1" max="100" value="30">
+                    </div>
+                </div>
+            </div>
+            <!-- End Edge Adjustment -->
+
+            <!-- Styles Tool -->
+            <div id="styleOptions" class="hidden fixed bottom-0 z-10 border-t border-[#D5D5D5] bg-white w-full pb-3">
+                <div onclick="closeTools('styleOptions')" class="flex items-center px-4 py-3">
+                    <img src="assets/images/icons/Clear.png" alt="">
+                    <h1 class="text-base font-medium text-center flex-grow">Style</h1>
+                    <img src="assets/images/icons/Check Big.png" alt="">
+                </div>
+                <div class="flex gap-4 px-4 py-6 text-[11px]">
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">Photo</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 88.png" alt="">
+                        <p class="text-sm text-center ">Digital-Art</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">Anime</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">3D</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Styles Tool -->
+            <!-- Light Tool -->
+            <div id="lightOptions" class="hidden fixed bottom-0 z-10 border-t border-[#D5D5D5] bg-white w-full pb-3">
+                <div onclick="closeTools('lightOptions')" class="flex items-center px-4 py-3">
+                    <img src="assets/images/icons/Clear.png" alt="">
+                    <h1 class="text-base font-medium text-center flex-grow">Light</h1>
+                    <img src="assets/images/icons/Check Big.png" alt="">
+                </div>
+                <div class="flex gap-4 px-4 py-6 text-[11px]">
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">Photo</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 88.png" alt="">
+                        <p class="text-sm text-center ">Digital-Art</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">Anime</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/Rectangle 87.png" alt="">
+                        <p class="text-sm text-center ">3D</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Light Tool -->
+        </div>
+    </section>
+    <!-- Toolbar Section -->
+
 
     <!-- loading -->
     <section id="loading" class="h-[80vh] items-center justify-center hidden">
@@ -244,6 +394,7 @@
             </div>
         </div>
     </section>
+    <!-- end Loading -->
 
     <script src="assets/js/main.js"></script>
 </body>

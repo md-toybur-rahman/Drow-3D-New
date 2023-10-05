@@ -91,3 +91,12 @@ function handleCloseMenubar (menubarId) {
 }
 
 
+function openTools (toolId, styleName) {
+    const tool = document.getElementById(toolId);
+    tool.style.display = 'block';
+}
+function closeTools (toolId) {
+    const tool = document.getElementById(toolId);
+    tool.style.display = 'none'
+}
+
