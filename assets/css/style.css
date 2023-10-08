@@ -235,6 +235,24 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
+/* HIDE RADIO */
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio]+img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked+img {
+  opacity: 0.5;
+}
+
 
 @media only screen and (max-width: 768px) {
   .modal-content {
